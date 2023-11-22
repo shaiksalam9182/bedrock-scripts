@@ -1,0 +1,21 @@
+PUT contents
+{
+  "settings": {
+    "index.knn": true
+  },
+  "mappings": {
+    "properties": {
+      "show_id":{
+        "type": "text"
+      }  
+      "title": {
+        "type": "knn_vector",
+        "dimension": 1536
+      },
+      "description": {
+        "type": "knn_vector",
+        "dimension": 1536
+      }
+    }
+  }
+}
